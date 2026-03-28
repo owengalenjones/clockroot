@@ -152,6 +152,10 @@
     </ng-container>
   }
 
+    <ion-item *ngIf="!bot.setupHidden">
+        <app-riverfolk-services [bot]="bot" [botService]="botService"></app-riverfolk-services>
+    </ion-item>
+
   @if (bot.setupHidden) {
     <ng-container>
       <ion-item>
@@ -250,7 +254,7 @@
                             class="flip-front"
                             (click)="toggleBuilding(building.suit, num)"
                             (keyup.enter)="toggleBuilding(building.suit, num)"
-                          
+
                         tabindex="0">
                             +{{ num }}
                           </div>
