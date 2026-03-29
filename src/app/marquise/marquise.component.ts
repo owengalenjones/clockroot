@@ -6,7 +6,6 @@ import {MetaData, ParagraphComponent} from '../paragraph/paragraph.component';
 import {IonicModule} from '@ionic/angular';
 import {BotResourcesComponent} from '../bot-resources/bot-resources.component';
 import {FormatPipe} from '../format.pipe';
-import {RiverfolkServicesComponent} from "../riverfolk-services/riverfolk-services.component";
 
 @Component({
     selector: 'app-marquise',
@@ -17,8 +16,7 @@ import {RiverfolkServicesComponent} from "../riverfolk-services/riverfolk-servic
         BotResourcesComponent,
         ParagraphComponent,
         TranslatePipe,
-        FormatPipe,
-        RiverfolkServicesComponent
+        FormatPipe
     ],
 })
 export class MarquiseComponent implements OnInit {

@@ -14,7 +14,6 @@ import { LizardBot } from './models/lizard';
 import { CorvidBot } from './models/corvid';
 import { RiverfolkBot } from './models/riverfolk';
 import { LegionBot } from './models/legion';
-import {RiverfolkServiceLevel} from './models/bot';
 import { AlertController, ModalController } from '@ionic/angular';
 import { PriorityModalComponent } from './priority-modal/priority-modal.component';
 
@@ -282,11 +281,6 @@ export class BotService {
       return;
     }
     bot.difficulty = difficulty as Difficulty;
-    this.saveBots();
-  }
-
-  public changeRiverfolkServiceLevel(bot: Bot, riverfolkServiceLevel: RiverfolkServiceLevel) {
-    bot.setRiverfolkServiceLevel(riverfolkServiceLevel);
     this.saveBots();
   }
 

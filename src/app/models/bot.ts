@@ -54,7 +54,6 @@ export type Item =
   | 'Boot7'
   | 'Sword7';
 export type Difficulty = 'Easy' | 'Normal' | 'Challenging' | 'Nightmare';
-export type RiverfolkServiceLevel = 'None' | 'Basic' | 'Advanced';
 
 export interface Rule {
   name: string;
@@ -65,7 +64,6 @@ export interface Rule {
 }
 
 export abstract class Bot {
-  private riverFolkServiceLevel: RiverfolkServiceLevel = 'None';
 
   constructor() {}
 
@@ -125,13 +123,4 @@ export abstract class Bot {
     };
   }
 
-  public setRiverfolkServiceLevel(
-    riverfolkServiceLevel: RiverfolkServiceLevel,
-  ) {
-    this.riverFolkServiceLevel = riverfolkServiceLevel;
-  }
-
-  getRiverfolkServiceLevel() {
-    return this.riverFolkServiceLevel;
-  }
 }
