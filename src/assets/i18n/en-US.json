@@ -30,7 +30,9 @@
     "ChooseTraits": "Choose Traits",
     "DifficultyText": "Difficulty",
     "TurmoilText": "You fall into Turmoil if you cannot place a roost.",
-    "TurmoilNobilityText": "You fall into Turmoil if you cannot place a roost or warrior."
+    "TurmoilNobilityText": "You fall into Turmoil if you cannot place a roost or warrior.",
+    "ChooseServices": "Choose Riverfolk Services",
+    "ChooseServicesSub": "Enable Basic or Advanced Services if there is a human or Clockwork Riverfolk in the game."
   },
   "AddBot": "Add a bot by clicking the",
   "Factions": {
@@ -311,6 +313,8 @@
     "RuleIronWill": "Iron Will",
     "TextIronWill": "Whenever you **Recruit** in Escalated Daylight, place double the warriors.",
     "TextIronWillDC": "**Repeat Daylight** may happen twice per turn instead of only once.",
+    "RuleOverwhelming": "Overwhelming",
+    "TextOverwhelming": "Whenever you **Recruit**, score one point for every two Warriors you cannot place because your supply is empty or because there are no legal clearings to place them in. **Expand** can only trigger once per turn.",
 
     "RuleEmbeddedAgents": "Embedded Agents",
     "TextEmbeddedAgents": "In battle as defender with a facedown plot token, you deal an extra hit.",
@@ -468,15 +472,19 @@
     "Mechanical Marquise": {
       "Blitz": "Find the clearing you rule of the highest priority without any enemy pieces. Move all but one warrior from the clearing. Then, battle in the destination clearing.",
       "Bird0": "Battle in all clearings. _(Defender is the player with most pieces, then victory points.)_",
-      "Bird1": "Recruit {{warriorsOverTwo}} warrior(s) in each of the two clearings you rule with lowest priority. If you only rule one clearing, place all {{totalWarriors}} warriors there.",
+      "Bird1": "Recruit {{splitWarriorsToRecruit}} warrior(s) in each of the two clearings you rule with lowest priority. If you only rule one clearing, place all {{totalWarriorsToRecruit}} warriors there.",
+      "Bird1Overwhelming": "Recruit {{splitWarriorsToRecruit}} warrior(s) in each of the two clearings you rule with lowest priority. If you only rule one clearing, place all {{totalWarriorsToRecruit}} warriors there. Score **vp:1** for every two Warriors you cannot place because your supply is empty.",
       "Bird2": "Build a building of the type with the most pieces on the map in a clearing you rule with the most Marquise Warriors.<br>_(On a tie between sawmills and any other building types, place a sawmill. On a tie between workshops and recruiters but not sawmills, place a recruiter.)_",
       "Bird3": "Move all but three of your warriors from each clearing to the adjacent clearing with the most enemy pieces. Then battle in each clearing you moved into.",
-      "BirdChallenging": "Place two warriors in the ordered clearing you rule of the highest priority.",
+      "SuitChallenging": "Place two warriors in the **card:{{suit}}** clearing you rule of the highest priority.",
+      "BirdChallenging": "Place two warriors in the clearing you rule of the highest priority.",
       "Suit0": "Battle in each **card:{{suit}}** clearing. _(Defender is the player with most pieces, then victory points.)_",
-      "Suit1": "Recruit {{totalWarriors}} warriors evenly spread across **card:{{suit}}** clearings you rule. If there are extra warriors that cannot be placed evenly in **card:{{suit}}** clearings, place the last warrior in the **card:{{suit}}** clearing with the highest priority.",
+      "Suit1": "Recruit {{totalWarriorsToRecruit}} warriors evenly spread across **card:{{suit}}** clearings you rule. If there are extra warriors that cannot be placed evenly in **card:{{suit}}** clearings, place the last warrior in the **card:{{suit}}** clearing with the highest priority.",
+      "Suit1Overwhelming": "Recruit {{totalWarriorsToRecruit}} warriors evenly spread across **card:{{suit}}** clearings you rule. If there are extra warriors that cannot be placed evenly in **card:{{suit}}** clearings, place the last warrior in the **card:{{suit}}** clearing with the highest priority. Score **vp:1** for every two Warriors you cannot place because your supply is empty or because there are no legal clearings to place them in.",
       "Suit2": "Build a **building:{{building}}** in a clearing you rule with the most Marquise warriors.",
       "Suit3": "Move all but three of your warriors from each **card:{{suit}}** clearing to the adjacent clearing with the most enemy pieces.",
-      "Repeat": "If you did not place a building this turn and have five or fewer buildings on the map, discard the order card, draw a new one, and repeat Daylight."
+      "Repeat": "If you did not place a building this turn and have five or fewer buildings on the map, discard the order card, draw a new one (**do not craft this item**), and repeat Daylight.",
+      "RepeatOverwhelming": "If you did not place a building this turn and have five or fewer buildings on the map, discard the order card, draw a new one (**do not craft this item**), and repeat Daylight. **Expand** can only trigger once per turn."
     },
     "Electric Eyrie (DC)": {
       "Recruit": "Recruit {{recruitNum}} warrior(s) in a {{suitText}} clearing with a roost. {{recruitText}}<br>_(**Ties**: Recruit in such a clearing with the most enemy pieces, then fewest Eyrie warriors, then lowest priority.)_",

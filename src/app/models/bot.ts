@@ -54,6 +54,7 @@ export type Item =
   | 'Boot7'
   | 'Sword7';
 export type Difficulty = 'Easy' | 'Normal' | 'Challenging' | 'Nightmare';
+export type RiverfolkServiceLevel = 'None' | 'Basic' | 'Advanced';
 
 export interface Rule {
   name: string;
@@ -64,6 +65,10 @@ export interface Rule {
 }
 
 export abstract class Bot {
+  private riverFolkServiceLevel: RiverfolkServiceLevel = 'None';
+
+  constructor() {}
+
   public abstract name: BotName;
   public abstract setupPosition: string;
 
@@ -105,11 +110,28 @@ export abstract class Bot {
     metaval: string | number,
     metatext: string,
   ): MetaData {
-    const obj = {
+    return {
       text: metatext,
       type: metatype,
       value: metaval,
     };
-    return obj;
+  }
+
+  createEmptyText(): MetaData {
+    return {
+      text: '',
+      type: 'text',
+      value: '',
+    };
+  }
+
+  public setRiverfolkServiceLevel(
+    riverfolkServiceLevel: RiverfolkServiceLevel,
+  ) {
+    this.riverFolkServiceLevel = riverfolkServiceLevel;
+  }
+
+  getRiverfolkServiceLevel() {
+    return this.riverFolkServiceLevel;
   }
 }
